@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet" />
+    <!-- Bootstrap icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <!-- Bootstrap Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <style>
+      * {
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --montserrat: "Montserrat", sans-serif;
+        --roboto: "Roboto", sans-serif;
+      }
+
+      .container {
+        font-family: var(--montserrat);
+        font-weight: 400;
+      }
+
+      #addbtn:focus {
+        outline: 1px solid black;
+      }
+
+      .checked {
+        text-decoration: line-through;
+      }
+    </style>
+    <title>TODO APP</title>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <div id="header" class="container-fluid mb-5">
+      <div class="container mx-auto">
+        <div class="row my-3 rounded-3 p-2">
+          <div class="col-12 text-center my-3">
+            <h1 class="p-3">TODO APP</h1>
+            <h3 style="color: darkgray">Create your task to do</h3>
+          </div>
+        </div>
+        <div
+          class="row my-3 d-flex align-items-center justify-content-between mx-3 gap-3 mx-md-0 gap-md-0">
+          <div class="col-12 col-md-8 d-flex gap-1">
+            <input
+              class="rounded-1 w-100 p-1 fs-2 shadow"
+              type="text"
+              name="userinput"
+              id="userinput"
+              placeholder="Add your task!" />
+            <input
+              class="rounded-1 w-100 p-1 fs-2 shadow"
+              type="datetime-local"
+              name="userinput"
+              id="DueDate"
+              value="" />
+          </div>
+          <div class="col-12 col-md-3 text-end">
+            <button
+              id="addbtn"
+              class="btn btn-info rounded-1 w-100 text-center text-uppercase shadow fw-semibold p-1 fs-2">
+              ADD TASK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body Section  -->
+    <div class="container-fluid">
+      <div class="container mx-auto">
+        <ul
+          id="task-box"
+          class="list-group list-group-horizontal row d-flex justify-content-between mx-3 gap-3 mx-md-0 gap-md-0"></ul>
+      </div>
+    </div>
+
+    <!-- Bootstrap Script -->
+    <script src="/bootstrap-5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="./Script.js"></script>
+  </body>
+</html>
